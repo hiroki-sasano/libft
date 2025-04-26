@@ -1,6 +1,16 @@
-#include <limits.h>
-#include <stdio.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/26 20:27:35 by hisasano          #+#    #+#             */
+/*   Updated: 2025/04/26 20:27:38 by hisasano         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
@@ -25,18 +35,18 @@ int	ft_atoi(const char *str)
 		if (result > INT_MAX / 10)
 		{
 			if (signe)
-				return INT_MIN;
+				return (INT_MIN);
 			else
-				return INT_MAX;
+				return (INT_MAX);
 		}
 		else if (result == INT_MAX / 10)
 		{
 			if ((!signe && (str[i] - '0') > 7) || (signe && (str[i] - '0') > 8))
 			{
 				if (signe)
-					return INT_MIN;
+					return (INT_MIN);
 				else
-					return INT_MAX;
+					return (INT_MAX);
 			}
 		}
 		result = result * 10 + (str[i] - '0');

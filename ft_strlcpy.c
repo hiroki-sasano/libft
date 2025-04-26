@@ -1,27 +1,37 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/26 20:34:16 by hisasano          #+#    #+#             */
+/*   Updated: 2025/04/26 20:34:21 by hisasano         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-size_t ft_strlcpy(char *dst, char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, char *src, size_t dstsize)
 {
-    size_t i;
-    size_t j;
+	size_t	i;
+	size_t	j;
 
-    i = 0;
-    j = 0;
-    while(src[i] != '\0')
-    {
-        i++;
-    }
-
-    if(dstsize == 0)
-        return i;
-
-    while(j < dstsize - 1 && src[j] != '\0')
-    {
-        dst[j] = src[j];
-        j++;
-    }
-    dst[j] = '\0';
-    return i;
+	i = 0;
+	j = 0;
+	while (src[i] != '\0')
+	{
+		i++;
+	}
+	if (dstsize == 0)
+		return (i);
+	while (j < dstsize - 1 && src[j] != '\0')
+	{
+		dst[j] = src[j];
+		j++;
+	}
+	dst[j] = '\0';
+	return (i);
 }
 
 // int main()
@@ -34,5 +44,5 @@ size_t ft_strlcpy(char *dst, char *src, size_t dstsize)
 
 //     printf("%zu", j);
 
-//     return 0;
+//     return (0);
 // }

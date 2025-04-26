@@ -1,4 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/26 20:28:16 by hisasano          #+#    #+#             */
+/*   Updated: 2025/04/26 20:28:40 by hisasano         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
+
+#ifndef SIZE_MAX
+# define SIZE_MAX ((size_t)-1)
+#endif
 
 void	*ft_calloc(size_t count, size_t size)
 {
@@ -25,3 +41,5 @@ void	*ft_calloc(size_t count, size_t size)
 
 //     return (0);
 // }
+
+/* SIZE_MAX = 18446744073709551615 */

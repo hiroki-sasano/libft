@@ -1,9 +1,20 @@
-#include <stdio.h>
-#include <ctype.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/26 20:30:47 by hisasano          #+#    #+#             */
+/*   Updated: 2025/04/26 20:30:52 by hisasano         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int     ft_isascii(int c)
+#include "libft.h"
+
+int	ft_isascii(int c)
 {
-    return  (c >= 0 && c <= 127);
+	return (c >= 0 && c <= 127);
 }
 
 // int main()
@@ -11,6 +22,6 @@ int     ft_isascii(int c)
 //     int c = 1;
 
 //     printf("%d\n", isascii(c));
-    
-//     return 0;
+
+//     return (0);
 // }

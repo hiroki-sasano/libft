@@ -1,18 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/26 20:34:41 by hisasano          #+#    #+#             */
+/*   Updated: 2025/04/26 20:34:45 by hisasano         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int     ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    while(i < n && (s1[i] != '\0' || s2[i] != '\0'))
-    {
-        if ((unsigned char)s1[i] != (unsigned char)s2[i])
-            return (unsigned char)s1[i] - (unsigned char)s2[i];
-        i++;
-    }
-
-    return 0;
+	i = 0;
+	while (i < n && (s1[i] != '\0' || s2[i] != '\0'))
+	{
+		if ((unsigned char)s1[i] != (unsigned char)s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
+	}
+	return (0);
 }
 
 // int main()
@@ -26,5 +37,5 @@ int     ft_strncmp(const char *s1, const char *s2, size_t n)
 //     int result_1 = strncmp(s1, s2, n);
 
 //     printf("%d : %d\n", result, result_1);
-//     return 0;
+//     return (0);
 // }

@@ -1,23 +1,35 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/26 20:35:12 by hisasano          #+#    #+#             */
+/*   Updated: 2025/04/26 20:35:16 by hisasano         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-    int i;
-    char *result;
+	int		i;
+	char	*result;
 
-    i = 0;
-    result = NULL;
-    while(s[i] != '\0')
-    {
-        if(s[i] == (char)c)
-        {
-            result = (char *)&s[i];
-        }
-        i++;
-    }
-    if (c == '\0')
-        return (char *)&s[i];
-    return result;
+	i = 0;
+	result = NULL;
+	while (s[i] != '\0')
+	{
+		if (s[i] == (char)c)
+		{
+			result = (char *)&s[i];
+		}
+		i++;
+	}
+	if (c == '\0')
+		return ((char *)&s[i]);
+	return (result);
 }
 
 // int main()
@@ -27,5 +39,5 @@ char *ft_strrchr(const char *s, int c)
 
 //     printf("%c : %s\n", c, ft_strrchr(s, c));
 //     printf("%c : %s\n", c, strrchr(s, c));
-//     return 0;
+//     return (0);
 // }
