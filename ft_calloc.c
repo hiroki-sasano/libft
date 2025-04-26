@@ -6,24 +6,22 @@
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:28:16 by hisasano          #+#    #+#             */
-/*   Updated: 2025/04/26 20:28:40 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/04/26 21:01:50 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#ifndef SIZE_MAX
-# define SIZE_MAX ((size_t)-1)
-#endif
-
 void	*ft_calloc(size_t count, size_t size)
 {
 	size_t	bytes;
+	size_t	max;
 	void	*ptr;
 
+	max = (size_t)-1;
 	if (count == 0 || size == 0)
 		return (malloc(1));
-	else if (size > SIZE_MAX / count)
+	else if (size > max / count)
 		return (NULL);
 	bytes = count * size;
 	ptr = malloc(bytes);

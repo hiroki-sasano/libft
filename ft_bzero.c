@@ -6,24 +6,24 @@
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:27:58 by hisasano          #+#    #+#             */
-/*   Updated: 2025/04/26 20:28:04 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/04/26 20:52:30 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    unsigned char *ptr;
-    size_t i;
+	unsigned char	*ptr;
+	size_t			i;
 
-    ptr = (unsigned char *)s;
-    i = 0;
-    while(i < n)
-    {
-        ptr[i] = '\0';
-        i++;
-    }
+	ptr = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+	{
+		ptr[i] = '\0';
+		i++;
+	}
 }
 
 // int main() {
@@ -34,5 +34,5 @@ void ft_bzero(void *s, size_t n)
 //     ft_bzero(buffer, i);
 //     printf("After : %s\n", buffer + i);
 
-//     return 0;
+//     return (0);
 // }

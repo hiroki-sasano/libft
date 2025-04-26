@@ -6,7 +6,7 @@
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:31:24 by hisasano          #+#    #+#             */
-/*   Updated: 2025/04/26 20:31:27 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/04/26 21:17:05 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,15 @@ int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }
+
+// int main()
+// {
+//     int c = 31;
+// 	while(c <= 127)
+// 	{
+// 	    printf("%d\n", ft_isprint(c));
+// 		c++;
+// 	}
+
+//     return (0);
+// }

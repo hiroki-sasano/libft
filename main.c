@@ -3,7 +3,7 @@
 int main()
 {
 	const char *s = "01233456789";
-	unsigned int  start = 8;
+	unsigned int  start = 4;
 
 	size_t len = 7;
 

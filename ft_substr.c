@@ -6,7 +6,7 @@
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 17:57:10 by hisasano          #+#    #+#             */
-/*   Updated: 2025/04/26 20:35:37 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/04/26 21:25:21 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	s_len = ft_strlen(s);
 	if (start >= s_len)
-		return (char *)ft_calloc(1, sizeof(char));
+		return ((char *)ft_calloc(1, sizeof(char)));
 	if (len > s_len - start)
 		len = s_len - start;
 	result = (char *)malloc(sizeof(char) * len + 1);
