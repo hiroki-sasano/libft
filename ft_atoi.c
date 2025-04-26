@@ -22,16 +22,23 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		if (result == INT_MAX / 10 && str[i] - '0' == 8)
-			return (INT_MIN);
-		if ((result > INT_MAX / 10) ||
-         ((result == INT_MAX / 10) && ((str[i] - '0') > INT_MAX % 10)))
-         {
-            result = -INT_MAX;
-            if (signe)
-			    return -result;
-            return result;
-         }
+		if (result > INT_MAX / 10)
+		{
+			if (signe)
+				return INT_MIN;
+			else
+				return INT_MAX;
+		}
+		else if (result == INT_MAX / 10)
+		{
+			if ((!signe && (str[i] - '0') > 7) || (signe && (str[i] - '0') > 8))
+			{
+				if (signe)
+					return INT_MIN;
+				else
+					return INT_MAX;
+			}
+		}
 		result = result * 10 + (str[i] - '0');
 		i++;
 	}
@@ -47,8 +54,10 @@ int	ft_atoi(const char *str)
 // 	int ft;
 // 	char *s;
 
-// 	s = "-2147483647";
-
+// 	// s = "-2147483647";
+// 	// s = "4294967295";
+// 	s = "-4294967295";
+//	s = "0000000005";
 // 	origine = atoi(s);
 // 	ft = ft_atoi(s);
 // 	printf("%s\n", s);

@@ -9,7 +9,7 @@ char *ft_strrchr(const char *s, int c)
     result = NULL;
     while(s[i] != '\0')
     {
-        if(s[i] == c)
+        if(s[i] == (char)c)
         {
             result = (char *)&s[i];
         }
@@ -23,9 +23,9 @@ char *ft_strrchr(const char *s, int c)
 // int main()
 // {
 //     const char s[] = "1234a678a9";
-//     int c = 'a';
+//     int c = 'a' + 256;
 
-//     printf("%c : %s", c, ft_strrchr(s, c));
-
+//     printf("%c : %s\n", c, ft_strrchr(s, c));
+//     printf("%c : %s\n", c, strrchr(s, c));
 //     return 0;
 // }
