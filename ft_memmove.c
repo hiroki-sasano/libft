@@ -6,7 +6,7 @@
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:32:55 by hisasano          #+#    #+#             */
-/*   Updated: 2025/04/26 20:32:56 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/04/27 13:52:05 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 //     char str[] = "0123456789";
 //     char str_2[] = "0123456789";
 
-//     // 部分的に重なる領域へのコピー
 //     printf("Before_ft : %s\n", str);
 //     printf("Before : %s\n", str_2);
 //     ft_memmove(str + 6, str, 5);

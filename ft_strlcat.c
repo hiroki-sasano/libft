@@ -6,7 +6,7 @@
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:34:05 by hisasano          #+#    #+#             */
-/*   Updated: 2025/04/26 20:34:08 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/04/26 23:26:01 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	srclen = ft_strlen((char *)src);
-	dstlen = ft_strlen(dst);
 	i = 0;
+	if (dst == NULL)
+		return (srclen);
+	else
+		dstlen = ft_strlen(dst);
 	if (dstsize == 0)
 		return (srclen);
 	if (dstlen >= dstsize)
@@ -45,8 +48,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 //     size_t result = ft_strlcat(dst, src, x);
 //     size_t result_2 = strlcat(dst_2, src_2, x);
+// 	size_t result_3 = ft_strlcat(NULL, src, x);
+//     size_t result_4 = strlcat(NULL, src_2, x);
+
 //     printf("%zu\n", result);
 //     printf("%zu\n", result_2);
+// 	printf("%zu\n", result_3);
+//     printf("%zu\n", result_4);
 
 //     return (0);
 // }

@@ -6,7 +6,7 @@
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 17:57:10 by hisasano          #+#    #+#             */
-/*   Updated: 2025/04/26 21:25:21 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/04/26 23:35:45 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	result = (char *)malloc(sizeof(char) * len + 1);
 	if (!result)
 		return (NULL);
-	while (i <= len)
+	while (i < len)
 	{
 		result[i] = s[start + i];
 		i++;
