@@ -2,18 +2,16 @@
 
 int main()
 {
-	const char *s = "01233456789";
-	unsigned int  start = 4;
+    const char s1[] = "123a456b789c";
+    const char set[] = "abc";
 
-	size_t len = 7;
+    char *result = ft_strtrim(s1, set);
 
-	char *result = ft_substr(s, start, len);
+    printf("%s\n", result);
 
-	printf("%s", result);
-
-	return 0;
+    return 0;
 }
 
-/*ccw main.c -L. -lft
+/* ccw main.c -L. -lft
 
  cc main.c ./libft.a*/

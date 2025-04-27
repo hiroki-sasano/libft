@@ -6,7 +6,7 @@
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 12:47:05 by hisasano          #+#    #+#             */
-/*   Updated: 2025/04/26 20:33:48 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/04/27 16:33:24 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strdup(const char *s1)
 
 	len = ft_strlen((char *)s1);
 	i = 0;
-	dup = malloc(sizeof(char) * len);
+	dup = malloc(sizeof(char) * len + 1);
 	if (dup == NULL)
 		return (NULL);
 	while (i < len)
@@ -28,6 +28,7 @@ char	*ft_strdup(const char *s1)
 		dup[i] = s1[i];
 		i++;
 	}
+	dup[i] = '\0';
 	return (dup);
 }
 
