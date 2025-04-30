@@ -1,45 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 12:47:05 by hisasano          #+#    #+#             */
-/*   Updated: 2025/04/30 19:10:52 by hisasano         ###   ########.fr       */
+/*   Created: 2025/04/30 19:17:55 by hisasano          #+#    #+#             */
+/*   Updated: 2025/04/30 20:21:01 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int		len;
-	int		i;
-	char	*dup;
+	unsigned int	i;
 
-	len = ft_strlen(s1);
 	i = 0;
-	dup = malloc(sizeof(char) * (len + 1));
-	if (dup == NULL)
-		return (NULL);
-	while (i < len)
+	while (s[i] != '\0')
 	{
-		dup[i] = s1[i];
+		f(i, &s[i]);
 		i++;
 	}
-	dup[i] = '\0';
-	return (dup);
 }
 
-/*
-int	main(void)
+void	test_print(unsigned int n, char *s)
 {
-	const char	s1[] = "12345";
-	char		*result;
-
-	result = ft_strdup(s1);
-	printf("%s\n", result);
-	return (0);
+	printf("%d : %s\n", n, s);
 }
-*/
+
+// int main()
+// {
+// 	char s[] = "123456789";
+// 	ft_striteri(s, test_print);
+
+// 	return (0);
+// }

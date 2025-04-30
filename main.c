@@ -1,29 +1,16 @@
 # include "libft.h"
 
-int	main(void)
+int main()
 {
-	const char	*s = "123,,,456,,,789";
-	char		c;
-	char		**result;
-	int			i;
+	char	s[] = "ABCDEFG";
 
-	c = ',';
-	result = ft_split(s, c);
-	i = 0;
-	printf("%s, %c\n", s, c);
-	while (result[i] != NULL)
-	{
-		printf("%s\n", result[i]);
-		i++;
-	}
-	i = 0;
-	while (result[i] != NULL)
-	{
-		free(result[i]);
-		i++;
-	}
-	free(result);
-	return (0);
+	int fd = open("test.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	if (fd == -1)
+		return -1;
+	
+	ft_putstr_fd(s, fd);
+
+	return 0;
 }
 
 /* ccw main.c -L. -lft
