@@ -1,15 +1,29 @@
 # include "libft.h"
 
-int main()
+int	main(void)
 {
-    const char s1[] = "123a456b789c";
-    const char set[] = "abc";
+	const char	*s = "123,,,456,,,789";
+	char		c;
+	char		**result;
+	int			i;
 
-    char *result = ft_strtrim(s1, set);
-
-    printf("%s\n", result);
-
-    return 0;
+	c = ',';
+	result = ft_split(s, c);
+	i = 0;
+	printf("%s, %c\n", s, c);
+	while (result[i] != NULL)
+	{
+		printf("%s\n", result[i]);
+		i++;
+	}
+	i = 0;
+	while (result[i] != NULL)
+	{
+		free(result[i]);
+		i++;
+	}
+	free(result);
+	return (0);
 }
 
 /* ccw main.c -L. -lft
