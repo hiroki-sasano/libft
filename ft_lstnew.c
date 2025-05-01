@@ -1,38 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/30 19:17:55 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/01 02:12:05 by hisasano         ###   ########.fr       */
+/*   Created: 2025/05/01 17:06:49 by hisasano          #+#    #+#             */
+/*   Updated: 2025/05/01 17:34:31 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+typedef struct s_list
 {
-	unsigned int	i;
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
-	i = 0;
-	while (s[i] != '\0')
-	{
-		f(i, &s[i]);
-		i++;
-	}
+t_list *ft_lstnew(void *content)
+{
+    
 }
- 
-// void	test_print(unsigned int n, char *s)
-// {
-// 	printf("%d : %s\n", n, s);
-// }
-
-// int main()
-// {
-// 	char s[] = "123456789";
-// 	ft_striteri(s, test_print);
-
-// 	return (0);
-// }
