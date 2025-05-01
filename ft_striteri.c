@@ -6,7 +6,7 @@
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 19:17:55 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/01 02:12:05 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/01 19:09:04 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
- 
+
 // void	test_print(unsigned int n, char *s)
 // {
 // 	printf("%d : %s\n", n, s);

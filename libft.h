@@ -6,7 +6,7 @@
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:37:43 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/01 16:18:51 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/01 21:59:30 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putnbr_fd(int n, int fd);
+void				ft_lstadd_front(t_list **lst, t_list *new);
 
 typedef struct s_list
 {

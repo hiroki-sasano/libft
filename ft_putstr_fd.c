@@ -6,11 +6,11 @@
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 21:21:13 by hisasano          #+#    #+#             */
-/*   Updated: 2025/04/30 21:45:35 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/01 19:07:30 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "libft.h"
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
@@ -25,9 +25,9 @@ void	ft_putstr_fd(char *s, int fd)
 
 // 	int fd = open("test.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
 // 	if (fd == -1)
-// 		return -1;
-	
+// 		return (-1);
+
 // 	ft_putstr_fd(s, fd);
 
-// 	return 0;
+// 	return (0);
 // }

@@ -6,7 +6,7 @@
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 17:57:10 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/01 02:06:54 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/01 19:09:28 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // 	char *r2 = ft_substr("test", 2, 0);  // → ""
 // 	printf("[%s]\n", r2);
 // 	free(r2);
-
 
 // 	return (0);
 // }

@@ -11,7 +11,7 @@ SRCS = ft_isalpha.c ft_memcpy.c ft_strlcpy.c ft_toupper.c \
        ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c\
        ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
-BONUS_SRCS = ft_lstnew.c
+BONUS_SRCS = ft_lstnew.c ft_lstadd_front.c
 
 OBJS = $(SRCS:.c=.o)
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
