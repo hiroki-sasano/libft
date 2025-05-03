@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/01 19:12:45 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/01 23:00:02 by hisasano         ###   ########.fr       */
+/*   Created: 2025/05/01 22:51:51 by hisasano          #+#    #+#             */
+/*   Updated: 2025/05/01 23:11:03 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+int ft_lstsize(t_list *lst)
 {
-	if (!lst || !new)
-		return ;
-	new->next = *lst;
-	*lst = new;
+    int result;
+
+    result = 0;
+    while(lst != NULL)
+    {
+        lst = lst->next;
+        result++;
+    }
+
+    return result;
 }
 
 // int	main(void)
@@ -27,10 +33,6 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 // 	char *nums[] = {"zero", "one", "two", "three", "four",
 // 		"five", "six", "seven", "eight", "nine"};
 
-// 	t_list *newnode = (t_list *)malloc(sizeof(t_list));
-// 	newnode->content = "minus";
-// 	newnode->next = NULL;
-
 // 	int i = 0;
 
 // 	while (i < 10)
@@ -39,16 +41,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 // 		node_arr[i].next = (i < 9) ? &node_arr[i + 1] : NULL;
 // 		i++;
 // 	}
-// 	ft_lstadd_front(&head, newnode);
-
-// 	t_list *tmp = head;
-
-// 	while (tmp)
-// 	{
-// 		printf("%s\n", (char *)tmp->content);
-// 		tmp = tmp->next;
-// 	}
-// 	free(newnode);
+//     printf("%d\n", ft_lstsize(head));
 
 // 	return (0);
 // }

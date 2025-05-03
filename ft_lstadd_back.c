@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/01 19:12:45 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/01 23:00:02 by hisasano         ###   ########.fr       */
+/*   Created: 2025/05/01 23:21:14 by hisasano          #+#    #+#             */
+/*   Updated: 2025/05/01 23:36:23 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
+	t_list	*end;
+
+	end = *lst;
 	if (!lst || !new)
 		return ;
-	new->next = *lst;
-	*lst = new;
+	if (*lst == NULL)
+		end = new;
+	while (end->next != NULL)
+		end = end->next;
+	end->next = new;
 }
 
 // int	main(void)
@@ -28,7 +34,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 // 		"five", "six", "seven", "eight", "nine"};
 
 // 	t_list *newnode = (t_list *)malloc(sizeof(t_list));
-// 	newnode->content = "minus";
+// 	newnode->content = "ten";
 // 	newnode->next = NULL;
 
 // 	int i = 0;
@@ -39,7 +45,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 // 		node_arr[i].next = (i < 9) ? &node_arr[i + 1] : NULL;
 // 		i++;
 // 	}
-// 	ft_lstadd_front(&head, newnode);
+// 	ft_lstadd_back(&head, newnode);
 
 // 	t_list *tmp = head;
 
