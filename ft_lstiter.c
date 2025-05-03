@@ -1,82 +1,71 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/03 00:25:17 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/03 16:38:53 by hisasano         ###   ########.fr       */
+/*   Created: 2025/05/03 14:56:57 by hisasano          #+#    #+#             */
+/*   Updated: 2025/05/03 17:22:49 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*temp;
-
-	if (!lst || !del)
-		return ;
-	while (*lst)
+	while (lst)
 	{
-		temp = (*lst)->next;
-		del((*lst)->content);
-		free(*lst);
-		*lst = temp;
+		f(lst->content);
+		lst = lst->next;
 	}
 }
+
 // void	del_content(void *content)
-// {
-// 	printf("free content: %s\n", (char *)content);
+// {;
 // 	free(content);
 // }
+
+// void	print_content(void *content)
+// {
+// 	printf("%s\n", (char *)content);
+// }
+
 // int	main(void)
 // {
 // 	const char *nums[] = {"zero", "one", "two", "three", "four",
 // 		"five", "six", "seven", "eight", "nine"};
 
-//     t_list *head = NULL;
-//     t_list *tail = NULL;
+// 	t_list *head = NULL;
+// 	t_list *tail = NULL;
 
-// 	int i = 0;
-
-// 	while (i < 10)
+// 	for (int i = 0; i < 10; i++)
 // 	{
-//         t_list *new_node = malloc(sizeof(t_list));
-//         if (!new_node)
-//             return (1);
+// 		t_list *new_node = malloc(sizeof(t_list));
+// 		if (!new_node)
+// 			return (1);
 // 		new_node->content = strdup(nums[i]);
 // 		if (!new_node->content)
-//         {
+// 		{
 // 			free(new_node);
-//             return (1);
-//         }
-
+// 			return (1);
+// 		}
 // 		new_node->next = NULL;
 
-//         if (!head)
-//             head = new_node;
-//         else
-//             tail->next = new_node;
-//         tail = new_node;
-// 		i++;
+// 		if (!head)
+// 			head = new_node;
+// 		else
+// 			tail->next = new_node;
+// 		tail = new_node;
 // 	}
 
-// 	t_list *cur = head;
-//     while (cur)
-// 	{
-// 		printf("%s\n", (char *)cur->content);
-// 		cur = cur->next;
-// 	}
+// 	ft_lstiter(head, print_content); 
 
 // 	ft_lstclear(&head, del_content);
-
 // 	if (!head)
 // 		printf("All nodes deleted\n");
 // 	else
 // 		printf("Error\n");
 
-// 	return (0);
 // 	return (0);
 // }

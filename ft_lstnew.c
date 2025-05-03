@@ -6,7 +6,7 @@
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 17:06:49 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/01 19:07:34 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/03 20:32:08 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*node;
 
-	node = (t_list *)malloc(sizeof(t_list));
+	node = malloc(sizeof(t_list));
 	if (!node)
 		return (NULL);
 	node->content = content;

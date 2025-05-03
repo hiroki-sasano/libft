@@ -1,16 +1,71 @@
-# include "libft.h"
+ # include "libft.h"
 
-int main()
+void	del_content(void *content)
 {
-	int	s = 12345;
+	free(content);
+}
 
-	int fd = open("test.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
-	if (fd == -1)
-		return -1;
+void	print_content(void *content)
+{
+	printf("%d\n", *(int *)content);
+}
+
+void	print_char_content(void *content)
+{
+	printf("%s\n", (char *)content);
+}
+
+void	*ft_atoi_wrapper(void *content)
+{
+	int		*nbr;
+	char	*str;
+
+	str = (char *)content;
+	nbr = malloc(sizeof(int));
+	if (!nbr)
+		return (NULL);
+	*nbr = ft_atoi(str);
+	return ((void *)nbr);
+}
+
+int	main(void)
+{
+	const char *nums[] = {"0", "1", "2", "3", "4",
+		"5", "6", "7", "8", "9"};
+
+	t_list *head = NULL;
+	t_list *tail = NULL;
+	t_list *result;
+
+	for (int i = 0; i < 10; i++)
+	{
+		t_list *new_node = malloc(sizeof(t_list));
+		if (!new_node)
+			return (1);
+		new_node->content = strdup(nums[i]);
+		if (!new_node->content)
+		{
+			free(new_node);
+			return (1);
+		}
+		new_node->next = NULL;
+
+		if (!head)
+			head = new_node;
+		else
+			tail->next = new_node;
+		tail = new_node;
+	}
+
+	ft_lstiter(head, print_char_content);
+
+	result = ft_lstmap( head, ft_atoi_wrapper, del_content);
 	
-	ft_putnbr_fd(s, fd);
+	ft_lstiter(result, print_content);
 
-	return 0;
+	ft_lstclear(&result, del_content); 
+
+	return (0);
 }
 /* ccw main.c -L. -lft
 
