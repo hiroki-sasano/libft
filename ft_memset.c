@@ -6,7 +6,7 @@
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:33:06 by hisasano          #+#    #+#             */
-/*   Updated: 2025/04/26 21:18:05 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/04 13:38:43 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	*ft_memset(void *s, int c, size_t n)
 //     char str[6] = "Hello";
 
 //     printf("Before: %s\n", str);
-//     ft_memset(str, '*', 3);
+//     ft_memset(str, -191, 3);
 //     printf("After : %s\n", str);
 
 //     return (0);
