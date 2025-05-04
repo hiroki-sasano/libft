@@ -6,23 +6,11 @@
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 17:14:44 by hisasano          #+#    #+#             */
-/*   Updated: 2025/04/30 19:16:39 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/04 19:30:48 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_strlen(const char *s)
-{
-	int	len;
-
-	len = 0;
-	while (s[len] != '\0')
-	{
-		len++;
-	}
-	return (len);
-}
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

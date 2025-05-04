@@ -1,4 +1,15 @@
-# libft/Makefile
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/05/04 19:47:43 by hisasano          #+#    #+#              #
+#    Updated: 2025/05/04 22:05:12 by hisasano         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 
 SRCS = ft_isalpha.c ft_memcpy.c ft_strlcpy.c ft_toupper.c \
@@ -31,9 +42,12 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(AR) rcs $(NAME) $(OBJS)
 
-bonus: $(OBJS) $(BONUS_OBJS)
-	$(AR) rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+ifeq ($(MAKECMDGOALS),bonus)
+    OBJS += $(OBJS_BONUS)
+endif
 
+bonus: $(BONUS_OBJS)
+	$(AR) rcs $(NAME) $(BONUS_OBJS)
 
 $(OBJS): $(HEADERS)
 $(BONUS_OBJS): $(HEADERS)

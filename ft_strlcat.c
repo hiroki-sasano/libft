@@ -6,7 +6,7 @@
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:34:05 by hisasano          #+#    #+#             */
-/*   Updated: 2025/04/26 23:26:01 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/04 20:16:21 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	srclen = ft_strlen((char *)src);
+	dstlen = ft_strlen(dst);
 	i = 0;
-	if (dst == NULL)
-		return (srclen);
-	else
-		dstlen = ft_strlen(dst);
-	if (dstsize == 0)
-		return (srclen);
 	if (dstlen >= dstsize)
 		return (srclen + dstsize);
 	while (dstlen + i < dstsize - 1 && src[i] != '\0')
@@ -36,6 +31,31 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[dstlen + i] = '\0';
 	return (srclen + dstlen);
 }
+
+// size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+// {
+// 	size_t	srclen;
+// 	size_t	dstlen;
+// 	size_t	i;
+
+// 	srclen = ft_strlen((char *)src);
+// 	i = 0;
+// 	if (dst == NULL && dstsize == 0)
+// 		return (srclen);
+// 	if (dst != NULL)
+// 		dstlen = ft_strlen(dst);
+// 	if (dstsize == 0)
+// 		return (srclen);
+// 	if (dstlen >= dstsize)
+// 		return (srclen + dstsize);
+// 	while (dstlen + i < dstsize - 1 && src[i] != '\0')
+// 	{
+// 		dst[dstlen + i] = src[i];
+// 		i++;
+// 	}
+// 	dst[dstlen + i] = '\0';
+// 	return (srclen + dstlen);
+// }
 
 // int main()
 // {

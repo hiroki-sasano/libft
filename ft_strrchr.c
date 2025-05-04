@@ -6,7 +6,7 @@
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:35:12 by hisasano          #+#    #+#             */
-/*   Updated: 2025/04/26 20:35:16 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/04 18:30:27 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strrchr(const char *s, int c)
 		}
 		i++;
 	}
-	if (c == '\0')
+	if ((char)c == '\0')
 		return ((char *)&s[i]);
 	return (result);
 }

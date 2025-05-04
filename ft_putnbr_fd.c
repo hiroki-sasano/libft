@@ -6,7 +6,7 @@
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 21:21:08 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/01 19:10:24 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/04 18:12:17 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	ft_putnbr_fd(int n, int fd)
 	if (n >= 10)
 		ft_putnbr_fd(n / 10, fd);
 	c = n % 10 + '0';
+	write(fd, &c, 1);
 }
 
 // int main()
@@ -42,4 +43,4 @@ void	ft_putnbr_fd(int n, int fd)
 // 	ft_putnbr_fd(s, fd);
 
 // 	return (0);
-// }
+// }U

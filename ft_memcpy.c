@@ -6,7 +6,7 @@
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:32:39 by hisasano          #+#    #+#             */
-/*   Updated: 2025/04/26 20:32:43 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/04 19:41:16 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
+	if (!dst && !src)
+		return (NULL);
 	while (i < n)
 	{
 		d[i] = s[i];

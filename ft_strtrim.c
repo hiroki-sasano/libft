@@ -6,13 +6,13 @@
 /*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:35:26 by hisasano          #+#    #+#             */
-/*   Updated: 2025/04/27 19:51:19 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/04 18:26:30 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*my_strdup(const char *s1, int start, int end)
+char	*ft_rangedup(const char *s1, int start, int end)
 {
 	int		size;
 	int		i;
@@ -58,7 +58,7 @@ char	*ft_reardel(char const *s1, char const *set)
 		if (set[i] == '\0')
 			break ;
 	}
-	return (my_strdup(s1, 0, size));
+	return (ft_rangedup(s1, 0, size));
 }
 
 char	*ft_frtdel(char *s1, char const *set)
@@ -86,7 +86,7 @@ char	*ft_frtdel(char *s1, char const *set)
 		if (set[i] == '\0')
 			break ;
 	}
-	result = my_strdup(s1, start, size);
+	result = ft_rangedup(s1, start, size);
 	return (result);
 }
 
