@@ -6,11 +6,12 @@
 /*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:32:23 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/05 14:01:52 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 15:46:04 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stddef.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

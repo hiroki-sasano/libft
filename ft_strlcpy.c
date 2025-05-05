@@ -6,11 +6,12 @@
 /*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:34:16 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/05 13:51:33 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 15:43:40 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stddef.h>
 
 size_t	ft_strlcpy(char *dst, char *src, size_t dstsize)
 {

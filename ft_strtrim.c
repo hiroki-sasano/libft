@@ -6,14 +6,14 @@
 /*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:35:26 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/05 13:57:30 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 15:37:37 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_rangedup(const char *s1, int start, int end)
+static char	*ft_rangedup(const char *s1, int start, int end)
 {
 	int		size;
 	int		i;
@@ -34,7 +34,7 @@ char	*ft_rangedup(const char *s1, int start, int end)
 	return (result);
 }
 
-char	*ft_reardel(char const *s1, char const *set)
+static char	*ft_reardel(char const *s1, char const *set)
 {
 	int	size;
 	int	i;
@@ -62,7 +62,7 @@ char	*ft_reardel(char const *s1, char const *set)
 	return (ft_rangedup(s1, 0, size));
 }
 
-char	*ft_frtdel(char *s1, char const *set)
+static char	*ft_frtdel(char *s1, char const *set)
 {
 	int		size;
 	int		i;

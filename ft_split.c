@@ -6,14 +6,14 @@
 /*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 17:10:28 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/05 13:46:37 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 15:45:13 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-size_t	ft_count_arr(const char *s, char c)
+static size_t	ft_count_arr(const char *s, char c)
 {
 	size_t	count;
 	int		in_word;
@@ -36,7 +36,7 @@ size_t	ft_count_arr(const char *s, char c)
 	return (count);
 }
 
-char	*ft_get_word(const char *s, char c, int arrcount)
+static char	*ft_get_word(const char *s, char c, int arrcount)
 {
 	int	i;
 	int	start;

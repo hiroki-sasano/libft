@@ -6,11 +6,12 @@
 /*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:32:39 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/05 13:36:49 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 15:45:57 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stddef.h>
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

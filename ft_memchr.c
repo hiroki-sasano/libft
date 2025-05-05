@@ -6,11 +6,12 @@
 /*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:31:57 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/05 13:35:22 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 15:46:33 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stddef.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

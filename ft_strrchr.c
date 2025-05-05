@@ -6,11 +6,12 @@
 /*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:35:12 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/05 13:56:16 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 15:40:40 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stddef.h>
 
 char	*ft_strrchr(const char *s, int c)
 {

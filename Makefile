@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+         #
+#    By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/04 19:47:43 by hisasano          #+#    #+#              #
-#    Updated: 2025/05/04 22:05:12 by hisasano         ###   ########.fr        #
+#    Updated: 2025/05/05 16:33:14 by hisasano         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,26 +31,24 @@ BONUS_SRCS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c\
 
 OBJS = $(SRCS:.c=.o)
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
-HEADERS = libft.h
 
+HEADERS = libft.h
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar
+
+ifeq ($(MAKECMDGOALS), bonus)
+OBJS := $(OBJS) $(BONUS_OBJS)
+endif
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(AR) rcs $(NAME) $(OBJS)
 
-ifeq ($(MAKECMDGOALS),bonus)
-    OBJS += $(OBJS_BONUS)
-endif
-
-bonus: $(BONUS_OBJS)
-	$(AR) rcs $(NAME) $(BONUS_OBJS)
+bonus: $(NAME)
 
 $(OBJS): $(HEADERS)
-$(BONUS_OBJS): $(HEADERS)
 
 clean:
 	rm -f $(OBJS) $(BONUS_OBJS)
