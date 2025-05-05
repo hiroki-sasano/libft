@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:28:52 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/04 12:04:10 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 13:13:06 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_isalnum(int c)
 		|| (c >= '0' && c <= '9'));
 }
 
+// #include <stdio.h>
+// #include <ctype.h> 
 // int main()
 // {
 //     int test_chars[] = {'0', '5', '9', 'a', 'Z', '!', ' ', -1, 128};

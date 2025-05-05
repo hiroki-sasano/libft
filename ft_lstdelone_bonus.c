@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 23:06:51 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/03 00:23:53 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 13:27:14 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
@@ -19,6 +20,8 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	del(lst->content);
 	free(lst);
 }
+
+// #include <stdio.h>
 
 // void	del_content(void *content)
 // {
@@ -32,7 +35,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 // 	if (!node)
 // 		return (1);
 
-// 	char *str = strdup("12345");
+// 	char *str = ft_strdup("12345");
 // 	if (!str)
 // 	{
 // 		free(node);

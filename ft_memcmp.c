@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:32:23 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/04 13:53:17 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 14:01:52 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,16 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (ptr1[i] != ptr2[i])
+		{
 			return (ptr1[i] - ptr2[i]);
+		}
 		i++;
 	}
 	return (0);
 }
+
+// #include <stdio.h>
+// #include <string.h>
 
 //  int main()
 //  {

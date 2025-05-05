@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:31:24 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/04 12:07:39 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 13:19:35 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	ft_isprint(int c)
 	return (c >= 32 && c <= 126);
 }
 
+// #include <stdio.h>
+// #include <ctype.h>
 // int main()
 // {
 //     int test_chars[] = {'0', '5', '9', 'a', 'Z', '!', ' ', 31, 127};

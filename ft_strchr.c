@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:33:30 by hisasano          #+#    #+#             */
-/*   Updated: 2025/04/26 20:33:36 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 13:47:37 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return ((char *)&s[i]);
 }
+
+// #include <stdio.h>
 
 // int main()
 // {

@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:35:26 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/04 18:26:30 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 13:57:30 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_rangedup(const char *s1, int start, int end)
 {
@@ -106,6 +107,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	free(reardel);
 	return (result);
 }
+
+// #include <stdio.h>
 
 // void test_trim(char *s1, char *set)
 // {

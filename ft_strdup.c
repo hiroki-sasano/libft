@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 12:47:05 by hisasano          #+#    #+#             */
-/*   Updated: 2025/04/30 19:10:52 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 13:48:15 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strdup(const char *s1)
 {
@@ -33,6 +34,8 @@ char	*ft_strdup(const char *s1)
 }
 
 /*
+#include stdio.h>
+
 int	main(void)
 {
 	const char	s1[] = "12345";

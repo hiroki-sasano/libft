@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:27:35 by hisasano          #+#    #+#             */
-/*   Updated: 2025/04/28 16:52:43 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 13:09:26 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,10 @@ int	ft_atoi(const char *str)
 		return (-result);
 	return (result);
 }
+
+// #include <stdio.h>
+// #include <stdlib.h>
+// # include <limits.h>
 
 // int	main(void)
 // {

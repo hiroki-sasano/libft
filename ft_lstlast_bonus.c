@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 23:05:50 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/04 18:18:00 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 13:29:00 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ t_list	*ft_lstlast(t_list *lst)
 	}
 	return (lst);
 }
+
+// #include <stdio.h>
 
 // int	main(void)
 // {

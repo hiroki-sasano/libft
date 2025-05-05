@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:33:06 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/04 13:38:43 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 13:40:07 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+
+// #include <stdio.h>
 
 // int main()
 // {

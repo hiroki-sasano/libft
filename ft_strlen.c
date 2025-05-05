@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:34:28 by hisasano          #+#    #+#             */
-/*   Updated: 2025/04/26 21:22:25 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 13:54:58 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	ft_strlen(const char *s)
 	}
 	return (len);
 }
+
+// #include <stdio.h>
 
 // int	main(void)
 // {

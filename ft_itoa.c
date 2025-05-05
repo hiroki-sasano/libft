@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:31:42 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/01 02:15:33 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 13:22:19 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 int	ft_myintlen(long n)
 {
@@ -50,6 +51,8 @@ char	*ft_itoa(int n)
 		result[0] = '-';
 	return (result);
 }
+
+// #include <stdio.h>
 
 // int	main(void)
 // {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:35:42 by hisasano          #+#    #+#             */
-/*   Updated: 2025/04/26 20:35:45 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 13:59:20 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	ft_tolower(int c)
 	else
 		return (c);
 }
+
+// #include <stdio.h>
 
 // int main()
 // {

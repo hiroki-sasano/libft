@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 17:06:49 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/03 20:32:08 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 13:31:26 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 t_list	*ft_lstnew(void *content)
 {
@@ -23,6 +24,8 @@ t_list	*ft_lstnew(void *content)
 	node->next = NULL;
 	return (node);
 }
+
+// #include <stdio.h>
 
 // int main()
 // {

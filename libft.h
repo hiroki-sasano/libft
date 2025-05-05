@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:37:43 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/03 17:30:06 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 14:00:56 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <ctype.h>
-# include <fcntl.h>
-# include <limits.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <string.h>
-# include <sys/stat.h>
-# include <sys/types.h>
-# include <unistd.h>
+// # include <ctype.h>
+// # include <fcntl.h>
+// # include <limits.h>
+// # include <stdio.h>
+// # include <stdlib.h>
+// # include <string.h>
+// # include <sys/stat.h>
+// # include <sys/types.h>
+// # include <unistd.h>
 
 typedef struct s_list
 {

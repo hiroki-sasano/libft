@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:34:16 by hisasano          #+#    #+#             */
-/*   Updated: 2025/04/26 20:34:21 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 13:51:33 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ size_t	ft_strlcpy(char *dst, char *src, size_t dstsize)
 	dst[j] = '\0';
 	return (i);
 }
+
+// #include <stdio.h>
 
 // int main()
 // {

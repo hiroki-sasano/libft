@@ -3,19 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 20:26:56 by hisasano          #+#    #+#             */
-/*   Updated: 2025/04/30 21:14:47 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 13:42:19 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
+
+// #include <fcntl.h>
 
 // int	main(void)
 // {

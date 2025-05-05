@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 17:10:28 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/04 19:36:56 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 13:46:37 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 size_t	ft_count_arr(const char *s, char c)
 {
@@ -84,6 +85,8 @@ char	**ft_split(char const *s, char c)
 	result[arrcount] = NULL;
 	return (result);
 }
+
+// #include <stdio.h>
 
 // int	main(void)
 // {

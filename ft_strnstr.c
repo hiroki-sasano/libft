@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:34:59 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/04 21:00:08 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 13:55:47 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (NULL);
 }
 
-// #include "libft.h"
+// #include <stdio.h>
 
 // char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 // {

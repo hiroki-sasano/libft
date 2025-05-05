@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:34:05 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/04 20:16:21 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 13:50:22 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[dstlen + i] = '\0';
 	return (srclen + dstlen);
 }
+
+// #include <stdio.h>
 
 // size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 // {

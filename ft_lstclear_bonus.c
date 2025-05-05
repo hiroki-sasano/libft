@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 00:25:17 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/03 16:38:53 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 13:26:03 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
@@ -26,6 +27,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		*lst = temp;
 	}
 }
+
+// #include <stdio.h>
+
 // void	del_content(void *content)
 // {
 // 	printf("free content: %s\n", (char *)content);
@@ -46,7 +50,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 //         t_list *new_node = malloc(sizeof(t_list));
 //         if (!new_node)
 //             return (1);
-// 		new_node->content = strdup(nums[i]);
+// 		new_node->content = ft_strdup(nums[i]);
 // 		if (!new_node->content)
 //         {
 // 			free(new_node);

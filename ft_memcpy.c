@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:32:39 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/04 19:41:16 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 13:36:49 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t			i;
-	unsigned char	*d;
 	unsigned char	*s;
+	unsigned char	*d;
 
 	i = 0;
 	d = (unsigned char *)dst;
@@ -30,6 +30,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
+
+// #include <stdio.h>
 
 // int main()
 // {

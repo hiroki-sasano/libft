@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hisasano <hsasano573@gmail.com>            +#+  +:+       +#+        */
+/*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 23:21:14 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/03 21:20:02 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 13:23:29 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		end = end->next;
 	end->next = new;
 }
+
+// #include <stdio.h>
+// #include <stdlib.h>
 
 // int	main(void)
 // {
