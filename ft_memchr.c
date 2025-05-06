@@ -6,19 +6,18 @@
 /*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:31:57 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/05 15:46:33 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 19:07:18 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t				i;
-	const unsigned char	*ptr;
+	unsigned char	*ptr;
 
-	ptr = (const unsigned char *)s;
+	ptr = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
@@ -39,9 +38,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 //     char *result = ft_memchr(str, 'e', 7);
 
 //     if (result)
-//         printf("fonnd: %c\n", *result);
+//         printf("found: %c\n", *result);
 //     else
-//         printf("not fonnd\n");
+//         printf("not found\n");
 
 //     return (0);
 // }

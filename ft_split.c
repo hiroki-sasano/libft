@@ -6,7 +6,7 @@
 /*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 17:10:28 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/05 15:45:13 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/06 12:13:07 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,17 @@ static char	*ft_get_word(const char *s, char c, int arrcount)
 	return (NULL);
 }
 
+static char	**free_all(char **arr, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+		free(arr[i++]);
+	free(arr);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		arrcount;
@@ -71,6 +82,8 @@ char	**ft_split(char const *s, char c)
 	char	**result;
 
 	arrcount = 0;
+	if (s == NULL)
+		return (NULL);
 	size = ft_count_arr(s, c);
 	result = (char **)malloc(sizeof(char *) * (size + 1));
 	if (!result)
@@ -80,6 +93,8 @@ char	**ft_split(char const *s, char c)
 	while (arrcount < size)
 	{
 		result[arrcount] = ft_get_word(s, c, arrcount);
+		if (!result[arrcount])
+			return (free_all(result, arrcount));
 		arrcount++;
 	}
 	result[arrcount] = NULL;

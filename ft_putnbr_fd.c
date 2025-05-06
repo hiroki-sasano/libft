@@ -6,7 +6,7 @@
 /*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 21:21:08 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/05 14:02:10 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/05 19:03:53 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ void	ft_putnbr_fd(int n, int fd)
 
 // int main()
 // {
-// 	int	s = 12345;
+// 	// int	s = 12345;
+// 	int s = 0;
 
 // 	int fd = open("test.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
 // 	if (fd == -1)
@@ -46,4 +47,4 @@ void	ft_putnbr_fd(int n, int fd)
 // 	ft_putnbr_fd(s, fd);
 
 // 	return (0);
-// }U
+// }
