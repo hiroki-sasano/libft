@@ -6,7 +6,7 @@
 /*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:27:35 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/05 18:12:25 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/06 14:14:25 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,18 @@ int	ft_atoi(const char *str)
 
 	i = 0;
 	result = 0;
-	sign = 0;
+	sign = 1;
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
 		|| str[i] == '\f' || str[i] == '\r')
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
-			sign = 1;
+			sign = -1;
 		i++;
 	}
 	result = ft_convert_to_int(str, &i);
-	if (sign)
-		return (-result);
-	return (result);
+	return (sign * result);
 }
 
 // #include <stdio.h>

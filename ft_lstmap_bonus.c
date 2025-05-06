@@ -6,7 +6,7 @@
 /*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 16:05:46 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/05 13:30:10 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/06 14:48:40 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		newnode = ft_lstnew(mapped);
 		if (!newnode)
 		{
+			del(mapped);
 			ft_lstclear(&newlst, del);
 			return (NULL);
 		}

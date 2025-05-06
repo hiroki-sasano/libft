@@ -6,7 +6,7 @@
 /*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:32:39 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/05 18:55:20 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/06 14:18:18 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,13 +44,13 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 // 	ft_memset(dst, 0, sizeof(dst));
 // 	ft_memset(dst_1, 0, sizeof(dst_1));
-	
+
 // 	ft_memcpy(dst, src, i);
 // 	memcpy(dst_1, src, i);
-	
+
 // 	dst[i] = '\0';
 // 	dst_1[i] = '\0';
-	
+
 // 	printf("ft_memcpy: %s\n", dst);
 // 	printf("memcpy   : %s\n", dst_1);
 

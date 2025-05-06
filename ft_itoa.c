@@ -6,7 +6,7 @@
 /*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:31:42 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/06 13:01:19 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/06 14:15:00 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	ft_myintlen(long n)
 
 	count = 0;
 	if (n == 0)
-		return 1;
+		return (1);
 	while (n > 0)
 	{
 		n /= 10;

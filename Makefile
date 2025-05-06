@@ -6,7 +6,7 @@
 #    By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/04 19:47:43 by hisasano          #+#    #+#              #
-#    Updated: 2025/05/06 11:31:07 by hisasano         ###   ########.fr        #
+#    Updated: 2025/05/06 14:24:10 by hisasano         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar
 
-ifeq ($(filter bonus,$(MAKECMDGOALS), bonus)
+ifeq ($(filter bonus,$(MAKECMDGOALS)),bonus)
 OBJS := $(OBJS) $(BONUS_OBJS)
 endif
 

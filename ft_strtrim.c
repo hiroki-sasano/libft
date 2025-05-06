@@ -6,7 +6,7 @@
 /*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:35:26 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/06 11:54:32 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/06 14:20:43 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static char	*ft_reardel(char const *s1, char const *set)
 {
 	int	size;
 	int	i;
-	
+
 	size = ft_strlen(s1) - 1;
 	if (size < 0)
 	{
@@ -99,7 +99,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1)
 		return (NULL);
 	else if (!set)
-		return (char *)ft_strdup(s1);
+		return ((char *)ft_strdup(s1));
 	if (s1[0] == '\0')
 		return ((char *)ft_strdup(""));
 	reardel = ft_reardel(s1, set);
