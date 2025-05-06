@@ -6,7 +6,7 @@
 /*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:33:58 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/06 11:45:45 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/06 17:15:50 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		len;
-	int		i;
-	int		j;
+	size_t	len;
+	size_t	i;
+	size_t	j;
 	char	*str;
 
 	if (s1 == NULL || s2 == NULL)

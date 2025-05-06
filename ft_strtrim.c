@@ -6,108 +6,43 @@
 /*   By: hisasano <hisasano@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 20:35:26 by hisasano          #+#    #+#             */
-/*   Updated: 2025/05/06 14:20:43 by hisasano         ###   ########.fr       */
+/*   Updated: 2025/05/06 17:19:37 by hisasano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static char	*ft_rangedup(const char *s1, int start, int end)
+static size_t	ft_isset(char c, const char *set)
 {
-	int		size;
-	int		i;
-	char	*result;
-
-	size = end - start + 1;
-	i = 0;
-	result = (char *)malloc(sizeof(char) * (size + 1));
-	if (!result)
+	while (*set)
 	{
-		return (NULL);
+		if (c == *set)
+			return (1);
+		set++;
 	}
-	while (start <= end)
-	{
-		result[i++] = s1[start++];
-	}
-	result[i] = '\0';
-	return (result);
-}
-
-static char	*ft_reardel(char const *s1, char const *set)
-{
-	int	size;
-	int	i;
-
-	size = ft_strlen(s1) - 1;
-	if (size < 0)
-	{
-		return ((char *)ft_strdup(""));
-	}
-	while (size >= 0)
-	{
-		i = 0;
-		while (set[i] != '\0')
-		{
-			if (s1[size] == set[i])
-			{
-				size--;
-				break ;
-			}
-			i++;
-		}
-		if (set[i] == '\0')
-			break ;
-	}
-	return (ft_rangedup(s1, 0, size));
-}
-
-static char	*ft_frtdel(char *s1, char const *set)
-{
-	int		size;
-	int		i;
-	int		start;
-	char	*result;
-
-	size = (ft_strlen(s1) - 1);
-	i = 0;
-	start = 0;
-	while (start <= size)
-	{
-		i = 0;
-		while (set[i] != '\0')
-		{
-			if (s1[start] == set[i])
-			{
-				start++;
-				break ;
-			}
-			i++;
-		}
-		if (set[i] == '\0')
-			break ;
-	}
-	result = ft_rangedup(s1, start, size);
-	return (result);
+	return (0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*reardel;
-	char	*result;
+	size_t	start;
+	size_t	end;
 
 	if (!s1)
 		return (NULL);
-	else if (!set)
+	if (!set)
 		return ((char *)ft_strdup(s1));
-	if (s1[0] == '\0')
+	start = 0;
+	end = ft_strlen(s1);
+	if (end == 0)
 		return ((char *)ft_strdup(""));
-	reardel = ft_reardel(s1, set);
-	if (!reardel)
-		return (NULL);
-	result = ft_frtdel(reardel, set);
-	free(reardel);
-	return (result);
+	end--;
+	while (s1[start] && ft_isset(s1[start], set))
+		start++;
+	while (end >= start && ft_isset(s1[end], set))
+		end--;
+	return (ft_substr(s1, start, end - start + 1));
 }
 
 // #include <stdio.h>
